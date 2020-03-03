@@ -1,6 +1,7 @@
 #include "graph.h"
 using namespace std;
 
+//O(V+E)
 void Graph::dfs_nonrecursive(int u, vector<bool>& visited, vector<int>& res){
     stack<int> s;
     s.push(u);
@@ -21,6 +22,7 @@ void Graph::dfs_nonrecursive(int u, vector<bool>& visited, vector<int>& res){
     }
 }
 
+//O(n(V+E))
 vector<int> Graph ::DFS_ALL()
 {
   int root = v_.begin()->first;

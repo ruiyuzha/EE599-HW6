@@ -2,6 +2,7 @@
 using namespace std;
 
 //Question 5
+//O(1)
 bool Solution::isSafe(vector<vector <int> > maze, int x, int y) 
 { 
     // if (x, y outside maze) return false 
@@ -11,6 +12,7 @@ bool Solution::isSafe(vector<vector <int> > maze, int x, int y)
     return false; 
 } 
 
+//O(n^2)
 bool Solution::solveMaze(vector<vector <int> > maze, pair<int, int> start_pts, pair<int, int> end_pts){
     int size_vector=maze.size();
     bool res=0;
@@ -22,6 +24,7 @@ bool Solution::solveMaze(vector<vector <int> > maze, pair<int, int> start_pts, p
     return true;
 }
 
+//O(n^2)
 bool Solution::solveMazeUtil(vector<vector <int> > maze, int x, int y, pair<int, int> end_pts, vector<vector <int> > visited) 
 { 
     int size_vector=maze.size();
@@ -55,6 +58,7 @@ bool Solution::solveMazeUtil(vector<vector <int> > maze, int x, int y, pair<int,
 } 
 
 //Question 6
+//O(logn)
 void Solution::partition (vector<int>& v, int i, int low, int high)
 {
   swap(v[i],v[high-1]);
@@ -71,6 +75,7 @@ void Solution::partition (vector<int>& v, int i, int low, int high)
     swap(v[k + 1], v[high-1]);
 }
 
+//O(n)
 void Solution::print_vector(vector<int> v){
     if(v.size()>0){
         cout<<"{";
