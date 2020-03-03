@@ -22,7 +22,7 @@ void Graph::dfs_nonrecursive(int u, vector<bool>& visited, vector<int>& res){
     }
 }
 
-//O(n(V+E))
+//O(V+E)
 vector<int> Graph ::DFS_ALL()
 {
   int root = v_.begin()->first;
